@@ -20,6 +20,8 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # phpDocumentor
 RUN composer require --dev phpdocumentor/phpdocumentor
 
+COPY index.html /var/www/html
+
 # Port
 EXPOSE 8080
 
