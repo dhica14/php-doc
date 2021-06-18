@@ -20,8 +20,8 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # phpDocumentor
 RUN composer require --dev phpdocumentor/phpdocumentor
 
-RUN "ServerName localhost" >> /etc/httpd/conf/httpd.conf
-RUN "Listen 8080" >> /etc/httpd/conf/httpd.conf
+RUN echo "ServerName localhost" >> /etc/httpd/conf/httpd.conf
+RUN echo "Listen 8080" >> /etc/httpd/conf/httpd.conf
 
 COPY index.html /var/www/html
 
