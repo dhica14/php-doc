@@ -21,7 +21,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN composer require --dev phpdocumentor/phpdocumentor
 
 # Port
-EXPOSE 80
+EXPOSE 8080
 
 # Httpd start
 ENTRYPOINT ["/usr/sbin/httpd", "-DFOREGROUND"]
